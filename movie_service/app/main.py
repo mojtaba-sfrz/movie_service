@@ -16,4 +16,4 @@ async def startup():
 async def shtdown():
     await database.disconnect()
 
-app.include_router(movies)
+app.include_router(movies, prefix='api/v1/movies', tages= ['movies'])
