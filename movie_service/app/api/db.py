@@ -5,7 +5,7 @@ from dataclasses import Database
 
 import os
 
-DATABASE_URL = os.getenv("MOVIE_ATABASE_URL")
+DATABASE_URL = os.getenv("MOVIE_DATABASE_URL")
 
 engine = creat_engine(DATABASE_URL)
 metadat = MetaData()
