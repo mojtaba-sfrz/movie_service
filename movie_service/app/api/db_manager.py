@@ -1,7 +1,8 @@
 from app.api.models import MovieIn, MovieOut, MovieUpdate
 from app.api.db import movies, database
 
-async def add_movie(playload:MovieIn):
+
+async def add_movie(playload: MovieIn):
 
     query = movies.insert().values(**playload.dict())
 
@@ -15,39 +16,27 @@ async def get_all_movies():
     return await database.fetch_all(query=query)
 
 
-async def get_movie(id:int):
+async def get_movie(id: int):
 
-    query = movies.select(movies.c.id==id)
+    query = movies.select(movies.c.id == id)
 
     return await database.fetch_one(query=query)
 
 
-async def update_movie(id:int, playload:MovieIn):
+async def update_movie(id: int, playload: MovieIn):
 
     query = (
         movies
         .update()
-        .where(movies.c.id==id)
+        .where(movies.c.id == id)
         .values(**playload.dict())
     )
 
     return await database.execute(query=query)
 
-async def delete_movie(id:int):
 
-    query = movies.delete().where(movies.c.id==id)
+async def delete_movie(id: int):
+
+    query = movies.delete().where(movies.c.id == id)
 
     return await database.execute(query=query)
-
-
-
-
-
-
-
-
-
-
-
-
-

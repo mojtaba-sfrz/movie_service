@@ -1,18 +1,18 @@
-from aqlalchemy import (Table, Column, MetaData,
-                         creat_engine, Integer, String, ARRAY)
+from sqlalchemy import (Table, Column, MetaData,
+                        create_engine, Integer, String, ARRAY)
 
-from dataclasses import Database
+from databases import Database
 
 import os
 
 DATABASE_URL = os.getenv("MOVIE_DATABASE_URL")
 
-engine = creat_engine(DATABASE_URL)
-metadat = MetaData()
+engine = create_engine(DATABASE_URL)
+metadata = MetaData()
 
 movies = Table(
     "movies",
-    metadat,
+    metadata,
     Column('id', Integer, primary_key=True),
     Column('name', String(50)),
     Column('plot', String(250)),

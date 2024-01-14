@@ -1,6 +1,7 @@
 from typing import List, Optional
 from pydantic import BaseModel
 
+
 class MovieIn(BaseModel):
     name: str
     plot: str
@@ -15,7 +16,6 @@ class MovieOut(MovieIn):
 class MovieUpdate(MovieIn):
 
     name: Optional[str] = None
-    plot: optional[str] = None
-    genres: optional[str] = None
+    plot: Optional[str] = None
+    genres: Optional[str] = None
     casts: Optional[str] = None
-

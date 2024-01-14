@@ -1,15 +1,14 @@
-from sqlalchemy import (Table, Column, creat_engine,
+from sqlalchemy import (Table, Column, create_engine,
                         MetaData, String, Integer)
 
 from databases import Database
 
-import os 
-
+import os
 
 
 DATABASE_URL = os.getenv("CAST_DATABASE_URL")
 
-engine = creat_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URL)
 
 metadata = MetaData()
 
