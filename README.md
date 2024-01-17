@@ -49,4 +49,4 @@ The project follows a microservices architecture, allowing for the independent d
 
 ### License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License
