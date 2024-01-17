@@ -50,6 +50,3 @@ The project follows a microservices architecture, allowing for the independent d
 ### License
 
 This project is licensed under the [MIT License](LICENSE).
-```
-
-Feel free to use this updated README file for your GitHub repository.
