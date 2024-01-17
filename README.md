@@ -40,8 +40,13 @@ The project follows a microservices architecture, allowing for the independent d
 ...
 
 ### Environment Variables
+Ensure the necessary environment variables are set in the .env file:
 
-...
+    MOVIE_DB_USERNAME
+    MOVIE_DB_PASSWORD
+    CAST_DB_USERNAME
+    CAST_DB_PASSWORD
+
 
 ### Contributing
 
